@@ -1,20 +1,23 @@
-﻿// Почувствуй себя интерном
-//  0. Вывести квадрат числа
+﻿// Участники команды: Лейсан Файзуллина, Алексей Родионов, Александр Сибирко
+
+// 0. Вывести квадрат числа
 Console.WriteLine(); //лишняя красота
 Console.WriteLine("Задача 0: Вывести квадрат числа"); //лишняя красота
-// Console.WriteLine($"Число {Num0} в квадрате = {Math.Pow(Num0, 2)}"); //через готовый метод
-
-// Александр
+// Александр Сибирко
 int SquareNum(int N) { return N * N; } //изобретаем велосипед с костылями пишем свой метод возведения в квадрат
 
 int Num0 = new Random().Next(-50, 50);
 Console.WriteLine($"Число {Num0} в квадрате = {SquareNum(Num0)}");
 
+// Альтернатива
+// Console.WriteLine($"Число {Num0} в квадрате = {Math.Pow(Num0, 2)}"); //через готовый метод
 
-//  1. По двум заданным числам проверять является ли первое квадратом второго
+
+// 1. По двум заданным числам проверять является ли первое квадратом второго
 Console.WriteLine(); //лишняя красота
 Console.WriteLine("Задача 1: По двум заданным числам проверять является ли первое квадратом второго"); //лишняя красота
 
+// Алексей Родионов
 bool SQR(int a, int b)
 {
     if (a == b * b)
@@ -38,14 +41,14 @@ Console.WriteLine($"{SQR(a1, b1)} a: {a1} , b: {b1} ");
 // Console.WriteLine($"Число {a1} является квадратом числа {b1}? Ответ: {aSqrbYesNo(a1, b1)}");
 
 
-//  2. Даны два числа. Показать большее и меньшее число
+// 2. Даны два числа. Показать большее и меньшее число
 Console.WriteLine(); //лишняя красота
 Console.WriteLine("Задача 2: Даны два числа. Показать большее и меньшее число"); //лишняя красота
 
-// Лейсан
+// Лейсан Файзуллина
 int a2 = new Random().Next(-50, 500);
 int b2 = new Random().Next(-50, 500);
-void BiggerSmaller(int a, int b) //!!!избавиться от void
+void BiggerSmaller(int a, int b)
 {
     if (a < b)
     {
@@ -58,10 +61,15 @@ void BiggerSmaller(int a, int b) //!!!избавиться от void
 }
 BiggerSmaller(a2, b2);
 
-//  3. По заданному номеру дня недели вывести его название
+// Альтернатива без void метода
+//
+//
+
+
+// 3. По заданному номеру дня недели вывести его название
 Console.WriteLine(); //лишняя красота
 Console.WriteLine("Задача 3: По заданному номеру дня недели вывести его название"); //лишняя красота
-// Алексей
+// Алексей Родионов
 int number = 4;
 void DayWeek(int number)
 {
@@ -84,11 +92,11 @@ DayWeek(number);
 // int daynumber3 = new Random().Next(1,8);
 // Console.WriteLine($"{daynumber3} день недели называется = {DayWeekName(daynumber3)}");
 
-//  4. Найти максимальное из трех чисел
+
+// 4. Найти максимальное из трех чисел
 Console.WriteLine(); //лишняя красота
 Console.WriteLine("Задача 4: Найти максимальное из трех чисел"); //лишняя красота
-
-// Лейсан
+// Лейсан Файзуллина
 int a4 = new Random().Next(-50, 50);
 int b4 = new Random().Next(-50, 50);
 int c4 = new Random().Next(-50, 50);
@@ -104,14 +112,15 @@ int Max(int a, int b, int c)
 int max = Max(a4, b4, c4);
 Console.WriteLine($"Максимальное число = {max}");
 
-//Альетрнатива (через числа передаваемые массивом)
+// Альетрнатива (через числа передаваемые массивом)
 //
 //
 
-//  5. Написать программу вычисления значения функции y=f(a), где f(а) = sin^[кол-во букв Фамилии](а)
+
+// 5. Написать программу вычисления значения функции y=f(a), где f(а) = sin^[кол-во букв Фамилии](а)
 Console.WriteLine(); //лишняя красота
 Console.WriteLine("Задача 5: Написать программу вычисления значения функции y=f(a), где f(а) = sin^[кол-во букв Фамилии](а)"); //лишняя красота
-
+//Алексей Родионов
 double Trig(double a)
 {
     double x, y;
@@ -123,21 +132,42 @@ double Trig(double a)
 double a = 60;
 Console.WriteLine($"sin (x) = {Trig(a)}");
 
-
+// Альтернатива
 // double ysinxpow7(double a)
 // {
 //     return Math.Pow(Math.Sin(a * Math.PI / 180), 7);
 // }
 // string surName5 = "Сибикро";
 // for (double i = 0; i < 360; i += 60)
-// {
-//     Console.WriteLine($"sin({i})^{surName5.Length} = {ysinxpow7(i)}");
-// }
+// { Console.WriteLine($"sin({i})^{surName5.Length} = {ysinxpow7(i)}"); }
 
-//  6. Выяснить является ли число чётным
+// 6. Выяснить является ли число чётным
+Console.WriteLine(); //лишняя красота
+Console.WriteLine("Задача 6: Выяснить является ли число чётным"); //лишняя красота
+// Лейсан Файзуллина
+int a6 = new Random().Next(-50, 50);
+Console.WriteLine($"Число а: {a6}");
+bool Number(int a)
+{
+    if (a % 2 == 0)
+    {
+        return true;
+    }
+    else return false;
+}
+Console.WriteLine($"{Number(a6)}");
 
+// // Альтернатива
+// bool NumisEven(int Na)
+// { return Na % 2 == 0; }
+// int a6 = 16;
+// Console.WriteLine($"Число чётное {a6}? Ответ: {NumisEven(a6)}");
+// a6 = 13;
+// Console.WriteLine($"Число чётное {a6}? Ответ: {NumisEven(a6)}");
 
-//  7. Показать числа от -N до N
+// 7. Показать числа от -N до N
+Console.WriteLine(); //лишняя красота
+Console.WriteLine("Задача 7: Показать числа от -N до N"); //лишняя красота
 //$$$ outdate code
 // void ShowNums(int N)
 // {
@@ -149,44 +179,163 @@ Console.WriteLine($"sin (x) = {Trig(a)}");
 // }
 //$$$ outdate code
 
-int N7 = 20;
+// Александр Сибирко
 string ShowNums(int N)
 {
     string NumsShow = "";
     for (int i = -N; i < N; i++)
     {
-        NumsShow = NumsShow + (i) + " ";
+        NumsShow = NumsShow + i + " ";
     }
     return NumsShow;
 }
+
+int N7 = 20;
 Console.WriteLine(ShowNums(N7));
 
-//  8. Показать четные числа от 1 до И
+// 8. Показать четные числа от 1 до N
+Console.WriteLine(); //лишняя красота
+Console.WriteLine("Задача 8: Показать четные числа от 1 до N"); //лишняя красота
+//Алексей Родионов
+void Numbers(int N)
+{
+    for (int i = 2; i <= N; i = i + 2)
+    {
+        Console.WriteLine(i);
+    }
+}
+int N = 12;
+Numbers(N);
 
+// Альтернатива
+// string EvenNums(int N)
+// {
+//     string evenNumsStr = "";
+//     for (int i = 2; i <=N; i +=2)
+//     {
+//         evenNumsStr = evenNumsStr + i + " ";
+//     }
+//     return evenNumsStr;
+// }
+// int N8 = 20;
+// Console.WriteLine(EvenNums(N8));
 
-//  9. Показать последнюю цифру трёхзначного числа
+// 9. Показать последнюю цифру трёхзначного числа
+Console.WriteLine(); //лишняя красота
+Console.WriteLine("Задача 9: Показать последнюю цифру трёхзначного числа"); //лишняя красота
+// Лейсан Файзуллина 
+int a9 = new Random().Next(100, 1000);
+Console.WriteLine($"a: {a9}");
+void LastNumber(int a)
+{
+    int b = a % 10;
+    Console.WriteLine($"Последняя цифра числа: {b}");
+}
+LastNumber(a9);
+
+// Альтернатива без void методов
+//
+//
 
 
 // 10. Показать вторую цифру трёхзначного числа
+Console.WriteLine(); //лишняя красота
+Console.WriteLine("Задача 10: Показать вторую цифру трёхзначного числа"); //лишняя красота
+// Лейсан Файзуллина 
+int a10 = new Random().Next(100, 1000);
+Console.WriteLine($"a: {a10}");
+void SecondNumber(int a)
+{
+    a = a % 100;
+    a = a / 10;
+    Console.WriteLine($"Вторая цифра числа: {a}");
+}
+SecondNumber(a10);
 
+
+// Альтернатива без void методов
+//
+//
 
 // 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
+Console.WriteLine(); //лишняя красота
+Console.WriteLine("Задача 11: Дано число из отрезка [10, 99]. Показать наибольшую цифру числа"); //лишняя красота
+// Алексей Родионов
+int a11 = new Random().Next(10, 100);
+Console.WriteLine($"a = {a}");
+
+void MaxNumber(int a)
+{
+    int b = a / 10;
+    int c = a % 10;
+    if (b > c)
+    {
+        Console.WriteLine(b);
+    }
+    else Console.WriteLine(c);
+}
+MaxNumber(a11);
+
+// Альтернатива без void методов
+//
+//
 
 
 // 12. Удалить вторую цифру трёхзначного числа
+Console.WriteLine(); //лишняя красота
+Console.WriteLine("Задача 12: Удалить вторую цифру трёхзначного числа"); //лишняя красота
+// Алексей Родионов
+int a12 = new Random().Next(100, 1000);
+Console.WriteLine($"a = {a12}");
 
+void DelMidNumeral(int a)
+{
+    int b = a / 100;
+    int c = a / 10;
+    int d = a % 10;
+    Console.WriteLine($"новое число = {b * 10 + d}");
+    //Console.WriteLine($"новое число = {b}{d}");
+}
+
+DelMidNumeral(a12);
 
 // 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
+Console.WriteLine(); //лишняя красота
+Console.WriteLine("Задача 13: Выяснить, кратно ли число заданному, если нет, вывести остаток."); //лишняя красота
 
+int a13 = new Random().Next(-100, 100);
+int k13 = new Random().Next(0, 16);
+Console.WriteLine($"Число {a13} кратно ли {k13}? Если нет какой остаток?");
+
+string ifmultiply(int N, int K)
+{
+    string result = "";
+    if (N % K != 0)
+    {
+        result = "" + (N % K);
+    }
+    return result;
+}
+
+Console.WriteLine(ifmultiply(a13,k13));
 
 // 14. Найти третью цифру числа или сообщить, что её нет
-
+Console.WriteLine(); //лишняя красота
+Console.WriteLine("Задача 14: Найти третью цифру числа или сообщить, что её нет"); //лишняя красота
+// Александр Сибирко
 string FindFirdNumber(int N, bool fromRtoL = true) //ищем третью цифру, по умолчанию справа на лево как идут разряды, если нужно слева направо то указываем что "НЕТ" поиску справа налево.
 {
     string NumStr = Convert.ToString(Math.Abs(N));
     if (NumStr.Length < 3)
     {
         return $"У числа {N} нету третей цифры";
+    }
+    else
+    {
+        if (true)
+        {
+
+        }
     }
     return NumStr + " Проверка";
     // return "Третей цифры нет";
@@ -197,3 +346,7 @@ Number14 = new Random().Next(-100000, 100000);
 Console.WriteLine($"Ищем третье справа-налево по разрядам: {FindFirdNumber(Number14)}");
 Number14 = new Random().Next(-100000, 100000);
 Console.WriteLine($"Ищем третье слева-направо \"как читаем\": {FindFirdNumber(Number14, false)}");
+
+
+
+// SPOILERS
