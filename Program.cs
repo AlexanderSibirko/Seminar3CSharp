@@ -316,8 +316,8 @@ string ifmultiply(int N, int K)
     }
     return result;
 }
+Console.WriteLine(ifmultiply(a13, k13));
 
-Console.WriteLine(ifmultiply(a13,k13));
 
 // 14. Найти третью цифру числа или сообщить, что её нет
 Console.WriteLine(); //лишняя красота
@@ -326,26 +326,31 @@ Console.WriteLine("Задача 14: Найти третью цифру числ�
 string FindFirdNumber(int N, bool fromRtoL = true) //ищем третью цифру, по умолчанию справа на лево как идут разряды, если нужно слева направо то указываем что "НЕТ" поиску справа налево.
 {
     string NumStr = Convert.ToString(Math.Abs(N));
+    string result;
     if (NumStr.Length < 3)
     {
-        return $"У числа {N} нету третей цифры";
+        result = $"У числа {N} нету третей цифры";
     }
     else
     {
-        if (true)
+        if (fromRtoL)
         {
-
+            result = $"Третья цифра {NumStr[NumStr.Length-3]}";
+        }
+        else
+        {
+            result = $"Третья цифра {NumStr[2]}";
         }
     }
-    return NumStr + " Проверка";
-    // return "Третей цифры нет";
+    return result;
 }
+
 int Number14 = new Random().Next(-100, 100);
-Console.WriteLine($"Тест для слишком короткого числа {FindFirdNumber(Number14)}");
-Number14 = new Random().Next(-100000, 100000);
-Console.WriteLine($"Ищем третье справа-налево по разрядам: {FindFirdNumber(Number14)}");
-Number14 = new Random().Next(-100000, 100000);
-Console.WriteLine($"Ищем третье слева-направо \"как читаем\": {FindFirdNumber(Number14, false)}");
+Console.WriteLine($"Тест для слишком короткого числа/ {FindFirdNumber(Number14)}");
+Number14 = new Random().Next(-10000000, 10000000);
+Console.WriteLine($"Ищем третье справа-налево по разрядам, для числа {Number14}. {FindFirdNumber(Number14)}");
+Number14 = new Random().Next(-10000000, 10000000);
+Console.WriteLine($"Ищем третье слева-направо \"как читаем\", для числа {Number14}. {FindFirdNumber(Number14, false)}");
 
 
 
