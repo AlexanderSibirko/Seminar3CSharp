@@ -86,6 +86,17 @@ Console.WriteLine($"Максимальное число = {max}");
 
 
 //  7. Показать числа от -N до N
+//$$$ outdate code
+// void ShowNums(int N)
+// {
+//     for (int i = 0; i < N * 2 + 1; i++)
+//     {
+//         Console.Write($"{-N + i} ");
+//     }
+//     Console.WriteLine();
+// }
+//$$$ outdate code
+
 int N7 = 20;
 string ShowNums(int N)
 {
