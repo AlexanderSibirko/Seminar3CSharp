@@ -64,9 +64,9 @@ void DayWeek(int number)
 DayWeek(number);
 
 //  4. Найти максимальное из трех чисел
-int a4 = new Random().Next(-50,50);
-int b4 = new Random().Next(-50,50);
-int c4 = new Random().Next(-50,50);
+int a4 = new Random().Next(-50, 50);
+int b4 = new Random().Next(-50, 50);
+int c4 = new Random().Next(-50, 50);
 Console.WriteLine($"a={a4}, b={b4}, c={c4}");
 
 int Max(int a, int b, int c)
@@ -86,16 +86,17 @@ Console.WriteLine($"Максимальное число = {max}");
 
 
 //  7. Показать числа от -N до N
-int N = 20;
-void ShowNums(int N)
+int N7 = 20;
+string ShowNums(int N)
 {
+    string NumsShow = "";
     for (int i = 0; i < N * 2 + 1; i++)
     {
-        Console.Write($"{-N + i} ");
+        NumsShow = NumsShow + (-N + i) + " ";
     }
-    Console.WriteLine();
+    return NumsShow;
 }
-ShowNums(N);
+Console.WriteLine(ShowNums(N7));
 
 //  8. Показать четные числа от 1 до И
 
