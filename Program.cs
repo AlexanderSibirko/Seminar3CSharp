@@ -9,8 +9,8 @@ int SquareNum(int N) { return N * N; } //изобретаем велосипед
 int Num0 = new Random().Next(-50, 50);
 Console.WriteLine($"Число {Num0} в квадрате = {SquareNum(Num0)}");
 
-// Альтернатива
-// Console.WriteLine($"Число {Num0} в квадрате = {Math.Pow(Num0, 2)}"); //через готовый метод
+// // Альтернатива
+//Console.WriteLine($"Число {Num0} в квадрате = {Math.Pow(Num0, 2)}"); //через готовый метод
 
 
 // 1. По двум заданным числам проверять является ли первое квадратом второго
@@ -83,7 +83,7 @@ void DayWeek(int number)
 }
 DayWeek(number);
 
-// Альтернатива
+// // Альтернатива
 // string DayWeekName (int daynumber)
 // {
 //  string[] Dayweek = {"Понедельник", "Вторник", "Cреда", "Четверг", "Пятница", "Cуббота", "Воскресение"};
@@ -130,16 +130,16 @@ double Trig(double a)
     return y;
 }
 double a = 60;
-Console.WriteLine($"sin (x) = {Trig(a)}");
+Console.WriteLine($"sin(x)^8 = {Trig(a)}");
 
-// Альтернатива
-// double ysinxpow7(double a)
+// // Альтернатива
+// double ysinxpow7(double a, int surlen)
 // {
-//     return Math.Pow(Math.Sin(a * Math.PI / 180), 7);
+//     return Math.Pow(Math.Sin(a * Math.PI / 180), surlen);
 // }
-// string surName5 = "Сибикро";
+// string surName5 = "Сибирко";
 // for (double i = 0; i < 360; i += 60)
-// { Console.WriteLine($"sin({i})^{surName5.Length} = {ysinxpow7(i)}"); }
+// { Console.WriteLine($"sin({i})^{surName5.Length} = {ysinxpow7(i,surName5.Length)}"); }
 
 // 6. Выяснить является ли число чётным
 Console.WriteLine(); //лишняя красота
