@@ -13,14 +13,14 @@ int N = 12;
 Numbers(N);
 
 // Альтернатива без void
-// string EvenNums(int N)
-// {
-//     string evenNumsStr = "";
-//     for (int i = 2; i <=N; i +=2)
-//     {
-//         evenNumsStr = evenNumsStr + i + " ";
-//     }
-//     return evenNumsStr;
-// }
-// int N8 = 20;
-// Console.WriteLine(EvenNums(N8));
+string EvenNums(int N)
+{
+    string evenNumsStr = "";
+    for (int i = 2; i <=N; i +=2)
+    {
+        evenNumsStr = evenNumsStr + i + " ";
+    }
+    return evenNumsStr;
+}
+int N8 = 20;
+Console.WriteLine(EvenNums(N8));

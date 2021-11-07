@@ -17,13 +17,14 @@ a1 = 1; b1 = 0; //проверка на false
 Console.WriteLine($"{SQR(a1, b1)} a: {a1} , b: {b1} ");
 
 // Альтернатива
-// bool aSqrbYesNo(int Na, int Nb)
-// {
-//     return Na == Math.Pow(Nb,2);
-// }
-// a1 = 16;
-// b1 = 4;
-// Console.WriteLine($"Число {a1} является квадратом числа {b1}? Ответ: {aSqrbYesNo(a1, b1)}");
+bool aSqrbYesNo(int Na, int Nb)
+{
+    return Na == Math.Pow(Nb,2);
+}
+a1 = 16; b1 = 4;
+Console.WriteLine($"Число {a1} является квадратом числа {b1}? Ответ: {aSqrbYesNo(a1, b1)}");
 
-// Альтернатива 2 (делегаты)
-// bool aSqrbYesNo(int Na, int Nb) => Na == Math.Pow(Nb,2);
+// Альтернатива 2
+bool aSqrbYesNo2(int Na, int Nb) => Na == Math.Pow(Nb,2);
+a1 = 1; b1 = 0;
+Console.WriteLine($"Число {a1} является квадратом числа {b1}? Ответ: {aSqrbYesNo2(a1, b1)}");

@@ -14,13 +14,17 @@ bool Number(int a)
 }
 Console.WriteLine($"{Number(a6)}");
 
-// // Альтернатива
-// bool NumisEven(int Na)
-// { return Na % 2 == 0; }
-// int a6 = 16;
-// Console.WriteLine($"Число чётное {a6}? Ответ: {NumisEven(a6)}");
-// a6 = 13;
-// Console.WriteLine($"Число чётное {a6}? Ответ: {NumisEven(a6)}");
+// Альтернатива
+bool NumisEven(int Na)
+{ return Na % 2 == 0; }
+a6 = 16;
+Console.WriteLine($"Число чётное {a6}? Ответ: {NumisEven(a6)}");
+a6 = 13;
+Console.WriteLine($"Число чётное {a6}? Ответ: {NumisEven(a6)}");
 
-// // Альетрнатива (делегаты С#)
-// bool NumisEven(int Na) => Na % 2 == 0;
+// Альетрнатива 2
+bool NumisEven2(int Na) => Na % 2 == 0;
+a6 = 28;
+Console.WriteLine($"Число чётное {a6}? Ответ: {NumisEven2(a6)}");
+a6 = 11;
+Console.WriteLine($"Число чётное {a6}? Ответ: {NumisEven2(a6)}");

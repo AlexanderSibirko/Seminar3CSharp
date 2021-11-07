@@ -15,11 +15,11 @@ void DayWeek(int number)
 }
 DayWeek(number);
 
-// // Альтернатива
-// string DayWeekName (int daynumber)
-// {
-//  string[] Dayweek = {"Понедельник", "Вторник", "Cреда", "Четверг", "Пятница", "Cуббота", "Воскресение"};
-//  return Dayweek[daynumber-1];
-// }
-// int daynumber3 = new Random().Next(1,8);
-// Console.WriteLine($"{daynumber3} день недели называется = {DayWeekName(daynumber3)}");
+// Альтернатива
+string DayWeekName (int daynumber)
+{
+ string[] Dayweek = {"Понедельник", "Вторник", "Cреда", "Четверг", "Пятница", "Cуббота", "Воскресение"};
+ return Dayweek[daynumber-1];
+}
+int daynumber3 = new Random().Next(1,8);
+Console.WriteLine($"{daynumber3} день недели называется = {DayWeekName(daynumber3)}");

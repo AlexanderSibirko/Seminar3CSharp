@@ -12,7 +12,13 @@ void SecondNumber(int a)
 }
 SecondNumber(a10);
 
-// // Альтернатива без void методов
-// int SecondNum(int a) { return (a % 100) / 10; }
-// // int SecondNum(int a) => (a % 100) / 10; //или так
-// Console.WriteLine($"Вторая цифра числа: {SecondNum(a10)}");
+// Альтернатива без void методов
+int SecondNum(int a)
+{
+    return (a % 100) / 10;
+}
+Console.WriteLine($"Вторая цифра числа: {SecondNum(a10)}");
+
+// Альтернатива 2
+int SecondNum2(int a) => (a % 100) / 10; //или так
+Console.WriteLine($"Вторая цифра числа: {SecondNum2(a10)}");

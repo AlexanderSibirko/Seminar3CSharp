@@ -24,7 +24,7 @@ string FindThirdNumber(int N, bool fromRtoL = true) //ищем третью ци
     return result;
 }
 int Number14 = new Random().Next(-100, 100);
-Console.WriteLine($"Тест для слишком короткого числа/ {FindThirdNumber(Number14)}");
+Console.WriteLine($"Тест для слишком короткого числа. {FindThirdNumber(Number14)}");
 Number14 = new Random().Next(-10000000, 10000000);
 Console.WriteLine($"Ищем третье справа-налево по разрядам, для числа {Number14}. {FindThirdNumber(Number14)}");
 Number14 = new Random().Next(-10000000, 10000000);

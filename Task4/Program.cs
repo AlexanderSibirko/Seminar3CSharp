@@ -17,18 +17,18 @@ int Max(int a, int b, int c)
 int max = Max(a4, b4, c4);
 Console.WriteLine($"Максимальное число = {max}");
 
-// // Альетрнатива (через числа передаваемые массивом)
-// int[] NumArr4 = {a4, b4, c4};
-// int findMaxinArr(int[] NumArr)
-// {
-//     int MaxNum = NumArr[0];
-//     for (int i = 1; i < NumArr.Length; i++)
-//     {
-//         if (NumArr[i] > MaxNum)
-//         {
-//             MaxNum = NumArr[i];
-//         }
-//     }
-//     return MaxNum;
-// }
-// Console.WriteLine($"Максимальное число = {findMaxinArr(NumArr4)}");
+// Альетрнатива (через числа передаваемые массивом)
+int[] NumArr4 = {a4, b4, c4};
+int findMaxinArr(int[] NumArr)
+{
+    int MaxNum = NumArr[0];
+    for (int i = 1; i < NumArr.Length; i++)
+    {
+        if (NumArr[i] > MaxNum)
+        {
+            MaxNum = NumArr[i];
+        }
+    }
+    return MaxNum;
+}
+Console.WriteLine($"Максимальное число = {findMaxinArr(NumArr4)}");

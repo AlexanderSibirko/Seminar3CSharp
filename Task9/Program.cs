@@ -11,13 +11,13 @@ void LastNumber(int a)
 }
 LastNumber(a9);
 
-// // Альтернатива без void методов
-// int LastNum(int a)
-// {
-//     return  a % 10;
-// }
-// Console.WriteLine(LastNum(a9));
+// Альтернатива без void методов
+int LastNum(int a)
+{
+    return  a % 10;
+}
+Console.WriteLine(LastNum(a9));
 
-// // Альтернатива (делегирование)
-// int LastN(int a) => a % 10;
-// Console.WriteLine(LastN(a9));
+// Альтернатива (делегирование)
+int LastN(int a) => a % 10;
+Console.WriteLine(LastN(a9));
