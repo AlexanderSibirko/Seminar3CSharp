@@ -278,8 +278,6 @@ LastNumber(a9);
 // int LastN(int a) => a % 10;
 // Console.WriteLine(LastN(a9));
 
-// // Альтернатива без метода ^^
-// Console.WriteLine(a9 % 10);
 
 // 10. Показать вторую цифру трёхзначного числа
 Console.WriteLine(); //лишняя красота
@@ -295,12 +293,11 @@ void SecondNumber(int a)
 }
 SecondNumber(a10);
 
-// Альтернатива без void методов
-int SecondNum(int a)
-{
-    return (a % 100) / 10;
-}
-Console.WriteLine($"Вторая цифра числа: {SecondNum(a10)}");
+// // Альтернатива без void методов
+// int SecondNum(int a) { return (a % 100) / 10; }
+// // int SecondNum(int a) => (a % 100) / 10; //или так
+// Console.WriteLine($"Вторая цифра числа: {SecondNum(a10)}");
+
 
 // 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
 Console.WriteLine(); //лишняя красота
@@ -334,21 +331,44 @@ MaxNumber(a11);
 // }
 // Console.WriteLine(MaxNumberAlt(a11));
 
-// Для интереса найти наибольшую цифру числа (любого), не превращая его в строку? NYI
-// int MaxNumberAnyLen(int N)
+// // Задача 11**: Найти наибольшую цифру "любого" целого числа
+// a11 = new Random().Next(10000, 1000000);
+// int MaxNumberAnyLen(int N) //вычислятель наибольшей цифры числа
 // {
-//     int divresult = 1;
-//     while (divresult > 0)
+//     int[] numbers = decompNum(N); //получаем набор цифр числа
+//     int maxNum = numbers[0]; //принимаем базово что первая цифра максимальна
+//     for (int i = 1; i < numbers.Length;i++) //находим максимальное из чисел в массиве
 //     {
-//         divresult = N % 10;
+//         if (numbers[i]>maxNum)
+//         {
+//             maxNum = numbers[i];
+//         }
 //     }
-//     if (N2 > N1)
-//     {
-//         return N2;
-//     }
-//     return N1;
+//     return maxNum;
 // }
-// Console.WriteLine(MaxNumberAlt(a11));
+// int[] decompNum(int N) //разбиватель числа в массив из его цифр (очередность цифр внтури массива справа на лево, по рязрядам)
+// {
+//     // int arrLen = NumberCharNum(N); //определяем количество цифр в числе (без превращения числа в строку)
+//     int arrLen = N.ToString().Length; //определяем количество цифр в числе
+//     int[] numbersInNum = new int[arrLen]; //задаёмся массивом для цифр
+//     for (int i = 0; i < arrLen;i++) //передача цифр числа в массив
+//     {
+//         numbersInNum[i] = N % (int)Math.Pow(10,i+1) / (int)Math.Pow(10,i); //получаем цифры справа на лево (по разрядам)
+//     }
+//     return numbersInNum;
+// }
+// // int NumberCharNum(int N) //счётчик количества цифр в числе (мат метод)
+// // {
+// //     int count = 1;
+// //     while (N / 10 > 0)
+// //     {
+// //         N = N / 10;
+// //         count++;
+// //     }
+// //     return count;
+// // }
+// Console.WriteLine($"Максимальная цифра числа {a11} = {MaxNumberAnyLen(a11)}");
+
 
 // 12. Удалить вторую цифру трёхзначного числа
 Console.WriteLine(); //лишняя красота
