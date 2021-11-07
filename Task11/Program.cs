@@ -52,7 +52,8 @@ int[] decompNum(int N) //разбиватель числа в массив из 
     int[] numbersInNum = new int[arrLen]; //задаёмся массивом для цифр
     for (int i = 0; i < arrLen;i++) //передача цифр числа в массив
     {
-        numbersInNum[i] = N % (int)Math.Pow(10,i+1) / (int)Math.Pow(10,i); //получаем цифры справа на лево (по разрядам)
+        numbersInNum[i] = N % 10; //получаем цифры справа на лево (по разрядам)
+        N = N / 10;
     }
     return numbersInNum;
 }

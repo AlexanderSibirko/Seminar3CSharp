@@ -24,9 +24,7 @@ string PossibleCoordsDouble(int quater)
     }
 }
 
-
-for (int i = 1; i < 5; i++)
+for (int i = 1; i < 5; i++) //проверяем результаты для всех 4-х четвертей
 {
-    int quaterNum = i;
-    Console.WriteLine(PossibleCoordsDouble(quaterNum));
+    Console.WriteLine(PossibleCoordsDouble(i));
 }
