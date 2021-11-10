@@ -14,6 +14,6 @@ bool[] weekendDays = { false, false, false, false, false, true, true }; //шаб
 for (int i = 1; i <= 7; i++)
 { Console.WriteLine($"{i} день недели выходной? Ответ: {WeekendYN2(i, weekendDays)}"); }
 
-bool[] weekendDays = { false, false, false, false, true, true, false }; //шаблон выходных дней: например для Израиля где выходные дни приняты 5ый и 6ой ("пятница" и "суббота")
+bool[] weekendDays2 = { false, false, false, false, true, true, false }; //шаблон выходных дней: например для Израиля где выходные дни приняты 5ый и 6ой ("пятница" и "суббота")
 for (int i = 1; i <= 7; i++)
-{ Console.WriteLine($"{i} день недели выходной? Ответ: {WeekendYN2(i, weekendDays)}"); }
+{ Console.WriteLine($"{i} день недели выходной? Ответ: {WeekendYN2(i, weekendDays2)}"); }
