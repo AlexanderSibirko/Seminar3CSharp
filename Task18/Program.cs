@@ -27,16 +27,6 @@
 // }
 // Console.WriteLine(solveTester());
 
-string printArr(bool[] arr) //общий метод вывода Метода одной строкой, к задаче не имеет отношения
-{
-    string result = "";
-    for (int i = 0; i < arr.Length; i++)
-    {
-        result += arr[i] + " ";
-    }
-    return result;
-}
-
 // OBSOLETE //написал метод получепния начальных условий исходя из кол-ва переменных, более не нужно задавать вручную
 // bool[] X = { true, true, false, false }; //варианты начальных параметров, на самом деле зависит от количества переменных (руками создан вариант для 2-х перменных)
 // bool[] Y = { true, false, true, false };
@@ -102,8 +92,8 @@ bool isRight(bool[] a, bool[] b) //метод сравнивает две таб
 
 bool[] X = baseBoolArr(2, 1); //инициируем переменную X
 bool[] Y = baseBoolArr(2, 2); //инициируем переменную Y
-Console.WriteLine($"Значения X {printArr(X)}"); //debugging result check
-Console.WriteLine($"Значения У {printArr(Y)}"); //debugging result check
+Console.WriteLine($"Значения X {string.Join(",",X)}"); //debugging result check
+Console.WriteLine($"Значения У {string.Join(",",Y)}"); //debugging result check
 
 Console.WriteLine(isRight(NOT(OR(X, Y)), AND(NOT(X), NOT(Y)))); //вроверка правильности утверждения
 
@@ -131,10 +121,10 @@ bool[] XOR(bool[] a, bool[] b) //исключающее ИЛИ
 }
 
 Console.WriteLine($"Верно ли выражение ¬(X and Y) and (X or Y) = X xor Y ? Ответ:{isRight(AND(NOT(AND(X, Y)), OR(X, Y)), XOR(X, Y))}");
-Console.WriteLine(printArr(AND(X, Y))); // проверка (вертикальная таблица истинности) - 1 действие левой части
-Console.WriteLine(printArr(OR(X, Y))); // проверка (вертикальная таблица истинности) - 2 дейтсвие левой части
-Console.WriteLine(printArr(NOT(AND(X, Y)))); // проверка (вертикальная таблица истинности) - 3 действие левой части
-Console.WriteLine(printArr(AND(NOT(AND(X, Y)), OR(X, Y)))); // проверка (вертикальная таблица истинности) - 4 действие левой части
-Console.WriteLine(printArr(XOR(X, Y))); // проверка (вертикальная таблица истинности) - правая часть
+Console.WriteLine(string.Join(",",AND(X, Y))); // проверка (вертикальная таблица истинности) - 1 действие левой части
+Console.WriteLine(string.Join(",",OR(X, Y))); // проверка (вертикальная таблица истинности) - 2 дейтсвие левой части
+Console.WriteLine(string.Join(",",NOT(AND(X, Y)))); // проверка (вертикальная таблица истинности) - 3 действие левой части
+Console.WriteLine(string.Join(",",AND(NOT(AND(X, Y)), OR(X, Y)))); // проверка (вертикальная таблица истинности) - 4 действие левой части
+Console.WriteLine(string.Join(",",XOR(X, Y))); // проверка (вертикальная таблица истинности) - правая часть
 Console.WriteLine($"Верно ли выражение ¬(X or Y) = ¬X and ¬Y ? Ответ:{isRight(NOT(OR(X, Y)), AND(NOT(X), NOT(Y)))}");
 Console.WriteLine($"Верно ли выражение (X xor Y) and X = X and ¬Y ? Ответ:{isRight(AND(XOR(X, Y), X), AND(X, NOT(Y)))}");
