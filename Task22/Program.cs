@@ -24,7 +24,7 @@ double[] createPoint (int dimensionsNum)
 double dist2D(double[] point1, double[] point2) => Math.Sqrt(Math.Pow(point2[0]-point1[0],2) + Math.Pow(point2[1]-point1[1],2));
 double dist3D(double[] point1, double[] point2) => Math.Sqrt(Math.Pow(point2[0]-point1[0],2) + Math.Pow(point2[1]-point1[1],2)+ Math.Pow(point2[2]-point1[2],2));
 
-double distUniveral(double[] point1, double[] point2) //считаем что нам дали точки с одинаковой мерностью
+double distUniveral(double[] point1, double[] point2) //точки должны быть с одинаковой мерностью
 {
     int dimesions = point1.Length;
     double value = 0;
