@@ -1,2 +1,1 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// 40. В Указанном массиве вещественных чисел найдите разницу между максимальным и минимальным элементом 

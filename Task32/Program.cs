@@ -1,2 +1,1 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// 32. Задать массив из 8 элементов, заполненных нулями и единицами вывести их на экран

@@ -1,2 +1,1 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// 37. В одномерном массиве из 123 чисел найти количество элементов из отрезка [10,99]
