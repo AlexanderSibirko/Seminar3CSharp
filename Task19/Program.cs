@@ -4,7 +4,7 @@ while (X == 0) { X = new Random().Next(-10, 11); } //так как есть оп
 int Y = 0;
 while (Y == 0) { Y = new Random().Next(-10, 11); } //так как есть опасность при рандомизации получить 0, "крутим" пока будет не 0
 
-int quaterOfPlane(int x, int y)
+int quaterOfPlane(int x, int y) //возврат -1, если координата находиться на одной из осей
 {
     switch (x, y)
     {
