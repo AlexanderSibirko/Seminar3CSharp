@@ -56,7 +56,7 @@ int NumberCharNum(int N) //счётчик количества цифр в чи�
 
 bool numIsPalendrome(int N)
 {
-    int[] digitsInNum = decompNumNoStr(N);
+    int[] digitsInNum = decompNumNoStr(N); //decompNumNoStr, decompNumHalfStr, decompNumAsStr - любым способом разбиваем число на массив его цифр
     int arrlen = digitsInNum.Length;
     for (int i = 0; i < arrlen/2; i++)
     {
@@ -65,8 +65,43 @@ bool numIsPalendrome(int N)
     return true;
 }
 
+bool numIsPalendrome2(int N) //без декомпозиции числа на массив из его цифр ?
+{
+    int numLen = NumberCharNum(N);
+    for (int i = 0 ; i < numLen/2; i++)
+    {
+        //Console.WriteLine((int)(N / Math.Pow(10.0,numLen-1-2*i))); //debug code
+        //Console.WriteLine(N % 10); //debug code
+        if ((int)(N / Math.Pow(10.0,numLen-1-2*i)) != N % 10) {return false;}
+        N = N / 10;
+        N = N % (int)Math.Pow(10.0,numLen-2-2*i);
+        //Console.WriteLine(N); //debug code
+    }   
+    return true;
+}
+
+// bool numIsPalendrome3(int N) //без декомпозиции числа на массив из его цифр, не находя предварительно длинну числа ?
+// {
+//     int numLen = NumberCharNum(N);
+//     for (int i = 0 ; i < numLen/2; i++)
+//     {
+//         Console.WriteLine((int)(N / Math.Pow(10.0,numLen-1-2*i)));
+//         Console.WriteLine(N % 10);
+//         if ((int)(N / Math.Pow(10.0,numLen-1-2*i)) != N % 10) {return false;}
+//         N = N / 10;
+//         N = N % (int)Math.Pow(10.0,numLen-2-2*i);
+//         Console.WriteLine(N);
+//     }   
+//     return true;
+// }
+
 
 int number = 53435; //принудительная проверка палиндром
 Console.WriteLine($"Число {number} палиндом? Ответ: {numIsPalendrome(number)}");
+Console.WriteLine($"Число {number} палиндом? Ответ: {numIsPalendrome2(number)}");
+//Console.WriteLine($"Число {number} палиндом? Ответ: {numIsPalendrome3(number)}");
+
 number = 12345; //принудительная проверка не палиндром
 Console.WriteLine($"Число {number} палиндом? Ответ: {numIsPalendrome(number)}");
+Console.WriteLine($"Число {number} палиндом? Ответ: {numIsPalendrome2(number)}");
+//Console.WriteLine($"Число {number} палиндом? Ответ: {numIsPalendrome3(number)}");
