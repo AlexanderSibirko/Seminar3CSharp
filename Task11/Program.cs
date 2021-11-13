@@ -60,7 +60,7 @@ int[] decompNum(int N) //разбиватель числа в массив из 
 // int NumberCharNum(int N) //счётчик количества цифр в числе (мат метод)
 // {
 //     int count = 1;
-//     while (N / 10 > 0)
+//     while (Math.Abs(N / 10) > 0) //Math.Abs чтобы работало и с отрицательными числами
 //     {
 //         N = N / 10;
 //         count++;
