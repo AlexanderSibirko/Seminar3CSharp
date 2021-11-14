@@ -82,15 +82,15 @@ bool numIsPalendrome2(int N) //без декомпозиции числа на �
 
 // bool numIsPalendrome3(int N) //без декомпозиции числа на массив из его цифр, не находя предварительно длинну числа ?
 // {
-//     int numLen = NumberCharNum(N);
+//     int numLen = NumberCharNum(N); //исключить этот момент можем как-то?
 //     for (int i = 0 ; i < numLen/2; i++)
 //     {
-//         Console.WriteLine((int)(N / Math.Pow(10.0,numLen-1-2*i)));
-//         Console.WriteLine(N % 10);
+//         //Console.WriteLine((int)(N / Math.Pow(10.0,numLen-1-2*i))); //debug code
+//         //Console.WriteLine(N % 10); //debug code
 //         if ((int)(N / Math.Pow(10.0,numLen-1-2*i)) != N % 10) {return false;}
 //         N = N / 10;
 //         N = N % (int)Math.Pow(10.0,numLen-2-2*i);
-//         Console.WriteLine(N);
+//         //Console.WriteLine(N); //debug code
 //     }   
 //     return true;
 // }
@@ -99,9 +99,9 @@ bool numIsPalendrome2(int N) //без декомпозиции числа на �
 int number = 53435; //принудительная проверка палиндром
 Console.WriteLine($"Число {number} палиндом? Ответ: {numIsPalendrome(number)}");
 Console.WriteLine($"Число {number} палиндом? Ответ: {numIsPalendrome2(number)}");
-//Console.WriteLine($"Число {number} палиндом? Ответ: {numIsPalendrome3(number)}");
+//Console.WriteLine($"Число {number} палиндом? Ответ: {numIsPalendrome3(number)}"); //метод не готов
 
 number = 12345; //принудительная проверка не палиндром
 Console.WriteLine($"Число {number} палиндом? Ответ: {numIsPalendrome(number)}");
 Console.WriteLine($"Число {number} палиндом? Ответ: {numIsPalendrome2(number)}");
-//Console.WriteLine($"Число {number} палиндом? Ответ: {numIsPalendrome3(number)}");
+//Console.WriteLine($"Число {number} палиндом? Ответ: {numIsPalendrome3(number)}"); //метод не готов
