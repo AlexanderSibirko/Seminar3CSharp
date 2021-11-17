@@ -2,7 +2,7 @@
 Console.WriteLine(); //лишняя красота
 Console.WriteLine("Задача 12: Удалить вторую цифру трёхзначного числа"); //лишняя красота
 // Алексей Родионов
-int a12 = new Random().Next(100, 1000);
+int a12 = new Random().Next(-999, 1000);
 Console.WriteLine($"a = {a12}");
 
 void DelMidNumeral(int a)
