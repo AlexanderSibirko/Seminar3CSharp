@@ -75,3 +75,49 @@
 // Console.WriteLine(point);
 // Console.WriteLine(point.pX);
 // Console.WriteLine(point.pY);
+
+int[] CreateFilledIntArray(int count, int minValue, int maxValue)
+{
+    int[] array = new int[count];
+    for (int i = 0; i < count; i++)
+    {
+        array[i] = new Random().Next(minValue, maxValue);
+    }
+    return array;
+}
+
+string PrintArray(int[] array)
+{
+    int count = array.Length;
+    string result = String.Empty;
+    for (int i = 0; i < count; i++)
+    {
+        result += $"{array[i]} ";
+    }
+    return result;
+}
+
+int SumPosNeg(int[] array, bool lookPos = true)  // lookPos true - ищем положительные, false - ищем отрицательные
+{
+    int count = array.Length;
+    int sumP = 0;
+    for (int i = 0; i < count; i++)
+    {
+        if (lookPos)
+        {
+            if (array[i] > 0) sumP += array[i];
+        }
+        else
+        {
+            if (array[i] < 0) sumP += array[i];
+        }
+    }
+    return sumP;
+}
+
+Console.WriteLine(SumPosNeg(CreateFilledIntArray(12,0,9)));
+
+int[] arr = CreateFilledIntArray(12,-9,10);
+Console.WriteLine(PrintArray(arr));
+Console.WriteLine(SumPosNeg(arr,true));
+Console.WriteLine(SumPosNeg(arr,false));
