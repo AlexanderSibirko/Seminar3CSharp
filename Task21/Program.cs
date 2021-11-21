@@ -53,7 +53,6 @@ int NumberCharNum(int N) //счётчик количества цифр в чи�
     return count;
 }
 
-
 bool numIsPalendrome(int N)
 {
     int[] digitsInNum = decompNumNoStr(N); //decompNumNoStr, decompNumHalfStr, decompNumAsStr - любым способом разбиваем число на массив его цифр
