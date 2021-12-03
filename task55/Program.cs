@@ -24,17 +24,35 @@ string Print2DArray(int[,] array2D)
     {
         for (int j = 0; j < array2D.GetLength(1); j++)
         {
-            print += $"{array2D[i, j],6} "; //выравнивание по 8 знаков
+            print += $"{array2D[i, j],6} "; //выравнивание по 6 знаков
         }
         print += '\n';
     }
     return print;
 }
 
+double[] meanOfColumns(int[,] array2D)
+{
+    int rowCount = array2D.GetLength(0);
+    int colCount = array2D.GetLength(1);
+    double[] result = new double[colCount];
+    for (int j =0; j < colCount; j++)
+    {
+        int sum = 0;
+        for (int i = 0; i < rowCount; i++)
+        {
+            sum += array2D[i,j];
+        }
+        result[j] = (double)sum/(rowCount);
+    }
+    return result;
+}
 
-int n = 6;
-int k = 8;
-int[,] testArray = CreateArray(n, k);
-Fill2DArray(testArray, -10, 10);
+int i = 5;
+int j = 10;
+int[,] testArray = CreateArray(i, j);
+Fill2DArray(testArray, 0, 10);
 Console.WriteLine(Print2DArray(testArray));
+double[] means = meanOfColumns(testArray);
+Console.WriteLine(string.Join("|",means));
 
