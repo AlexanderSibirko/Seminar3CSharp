@@ -7,7 +7,7 @@ for (int i = 0; i < 60; i++)
     ledRGB[i, 2] = 0;
 }
 
-int step = 5;
+int step = 10;
 int speed = 10;
 
 while (true)
@@ -29,17 +29,23 @@ while (true)
     {
         case (255, < 255, 0):   //from Red to Yellow
             G += step;
+            if (G>255) G = 255;
             break;
         case ( > 0, 255, 0):    //from Yellow to Green
             R -= step;
+            if (R<0) R = 0;
             break;
         case (0, > 0, < 255):   //from Green to Blue
             G -= step;
+            if (G<0) G = 0;
             B += step;
+            if (B>255) B = 255;
             break;
         case ( < 255, 0, > 0):   //from Green to Red
             R += step;
+            if (R>255) R = 255;
             B -= step;
+            if (B<0) B = 0;
             break;
         default:
             break;
