@@ -7,7 +7,8 @@ for (int i = 0; i < 60; i++)
     ledRGB[i, 2] = 0;
 }
 
-int step = 10;
+//скорость и грубость пульсации
+int step = 5;
 int speed = 10;
 
 while (true)
