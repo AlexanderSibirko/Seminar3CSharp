@@ -6,8 +6,7 @@ for (int i = 0; i < 60; i++)
     ledRGB[i, 1] = 0;
     ledRGB[i, 2] = 0;
 }
-
-int step = 5;
+//велечины определяющие скорость пульсации
 int speed = 10;
 
 while (true)
@@ -28,18 +27,18 @@ while (true)
     switch (R, G, B)
     {
         case (255, < 255, 0):   //from Red to Yellow
-            G += step;
+            G ++;
             break;
         case ( > 0, 255, 0):    //from Yellow to Green
-            R -= step;
+            R --;
             break;
         case (0, > 0, < 255):   //from Green to Blue
-            G -= step;
-            B += step;
+            G --;
+            B ++;
             break;
         case ( < 255, 0, > 0):   //from Green to Red
-            R += step;
-            B -= step;
+            R ++;
+            B --;
             break;
         default:
             break;
