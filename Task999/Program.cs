@@ -27,18 +27,18 @@ while (true)
     switch (R, G, B)
     {
         case (255, < 255, 0):   //from Red to Yellow
-            G ++;
+            G++;
             break;
         case ( > 0, 255, 0):    //from Yellow to Green
-            R --;
+            R--;
             break;
         case (0, > 0, < 255):   //from Green to Blue
-            G --;
-            B ++;
+            G--;
+            B++;
             break;
         case ( < 255, 0, > 0):   //from Green to Red
-            R ++;
-            B --;
+            R++;
+            B--;
             break;
         default:
             break;
