@@ -1,4 +1,4 @@
-﻿//установка все диоды в карсный
+//установка все диоды в карсный
 int[,] ledRGB = new int[60, 3];
 for (int i = 0; i < 60; i++)
 {
@@ -6,7 +6,9 @@ for (int i = 0; i < 60; i++)
     ledRGB[i, 1] = 0;
     ledRGB[i, 2] = 0;
 }
-//велечины определяющие скорость пульсации
+
+//скорость и грубость пульсации
+int step = 5;
 int speed = 10;
 
 while (true)
@@ -27,18 +29,18 @@ while (true)
     switch (R, G, B)
     {
         case (255, < 255, 0):   //from Red to Yellow
-            G++;
+            G += step;
             break;
         case ( > 0, 255, 0):    //from Yellow to Green
-            R--;
+            R -= step;
             break;
         case (0, > 0, < 255):   //from Green to Blue
-            G--;
-            B++;
+            G -= step;
+            B += step;
             break;
         case ( < 255, 0, > 0):   //from Green to Red
-            R++;
-            B--;
+            R += step;
+            B -= step;
             break;
         default:
             break;
