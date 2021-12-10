@@ -1,4 +1,19 @@
-﻿// Участники команды: Лейсан Файзуллина, Алексей Родионов, Александр Сибирко
+//task 73 (temp)
+
+// int K = 8;
+// int M = 20;
+// int N = 8; //N[0] = 5, N[1]=10, N[X]=N[x-2]+N[x-1]...;
+
+// string FirstNofKPlusMSequence(int K, int M, int N)
+// {
+//     if (N == 1) return $"{K}";
+//     else return $"{K} {FirstNofKPlusMSequence(M, K + M, N-1)}";
+// }
+
+// Console.WriteLine(FirstNofKPlusMSequence(K, M, N));
+
+
+// Участники команды: Лейсан Файзуллина, Алексей Родионов, Александр Сибирко
 
 // 0. Вывести квадрат числа
 Console.WriteLine(); //лишняя красота
