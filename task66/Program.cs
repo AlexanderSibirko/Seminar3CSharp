@@ -3,7 +3,7 @@
 string showN(int n)
 {
     if (n == 1) return "1";
-    return $"{showN(n-1)} {n}";
+    return showN(n-1) + $" {n}";
 }
 
 int n = 20;
