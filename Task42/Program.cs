@@ -7,7 +7,7 @@
 // 2) Проверять каждую строку массива на преобразование в число.
 // 3) Посчитать кол-во чисел больше 0, в получишвемся массиве чисел.
 
-string[] splitString(string S, char Delimiter) //пока рассматриваем для одного варианта разделителя
+string[] SplitString(string S, char Delimiter) //пока рассматриваем для одного варианта разделителя
 {
     int sLen = S.Length;
     string[] subStrings = new string[sLen]; //худший вариант
@@ -28,7 +28,7 @@ string[] splitString(string S, char Delimiter) //пока рассматрива
     return subStrings;
 }
 
-bool checkIfNumber(string S) //ещё проверять "-", если хотябы один символ не удовлетворяет цифре, то говорим что не число, метод который можно применить к поиску не только цифр (но более трудоёмкий, так как делаем перебор)
+bool CheckIfNumber(string S) //ещё проверять "-", если хотябы один символ не удовлетворяет цифре, то говорим что не число, метод который можно применить к поиску не только цифр (но более трудоёмкий, так как делаем перебор)
 {
     S = S.Trim(); //пробелы в начале и в конце не считаем проблемой, просто их откидываем
     bool isNumber = false;
@@ -56,7 +56,7 @@ bool checkIfNumber(string S) //ещё проверять "-", если хотя�
     return isNumber;
 }
 
-bool checkIfNumber2(string S) //если хотябы один символ не удовлетворяет цифре, то говорим что не число (проверяем по номеру в таблице кодировки)
+bool CheckIfNumber2(string S) //если хотябы один символ не удовлетворяет цифре, то говорим что не число (проверяем по номеру в таблице кодировки)
 {
     S = S.Trim(); //пробелы в начале и в конце не считаем проблемой, просто их откидываем
     bool isNumber = false;
@@ -79,7 +79,7 @@ bool checkIfNumber2(string S) //если хотябы один символ не
     return isNumber;
 }
 
-int[] makeIntArr(string[] sArr)
+int[] MakeIntArr(string[] sArr)
 {
     int sArrLen = sArr.Length;
     int[] intArr = new int[sArrLen];
@@ -88,7 +88,7 @@ int[] makeIntArr(string[] sArr)
     {
         if (sArr[sArri] != null)
         {
-            if (checkIfNumber(sArr[sArri]))
+            if (CheckIfNumber(sArr[sArri]))
             {
                 intArr[intArri] = Int32.Parse(sArr[sArri]);
                 intArri++;
@@ -99,7 +99,7 @@ int[] makeIntArr(string[] sArr)
     return intArr;
 }
 
-int[] makeIntArr2(string[] sArr)
+int[] MakeIntArr2(string[] sArr)
 {
     int sArrLen = sArr.Length;
     int[] intArr = new int[sArrLen];
@@ -108,7 +108,7 @@ int[] makeIntArr2(string[] sArr)
     {
         if (sArr[sArri] != null)
         {
-            if (checkIfNumber2(sArr[sArri]))
+            if (CheckIfNumber2(sArr[sArri]))
             {
                 intArr[intArri] = Int32.Parse(sArr[sArri]);
                 intArri++;
@@ -119,10 +119,10 @@ int[] makeIntArr2(string[] sArr)
     return intArr;
 }
 
-int sumAboveZero(string S)
+int SumAboveZero(string S)
 {
     int sum = 0;
-    int[] numsArr = makeIntArr(splitString(S, ','));
+    int[] numsArr = MakeIntArr(SplitString(S, ','));
     for (int i = 0; i < numsArr.Length; i++)
     {
         if (numsArr[i] > 0)
@@ -135,13 +135,13 @@ int sumAboveZero(string S)
 
 Console.WriteLine("Введите числа через ',' (не более 100):"); // для дробных чисел как разделитель использовать '.', лишние пробелы в начале или в конце не считаем грубой "ошибкой"
 string userString = Console.ReadLine();
-string[] splited = splitString(userString, ','); //test splitter
+string[] splited = SplitString(userString, ','); //test splitter
 Console.WriteLine(String.Join("|", splited));
 
-int[] newIntArr = makeIntArr(splited); //test makeing int array our of splitted array
+int[] newIntArr = MakeIntArr(splited); //test makeing int array our of splitted array
 Console.WriteLine(String.Join("|", newIntArr));
 
-int[] newIntArr2 = makeIntArr2(splited); //test makeing int array our of splitted array (2nd method)
+int[] newIntArr2 = MakeIntArr2(splited); //test makeing int array our of splitted array (2nd method)
 Console.WriteLine(String.Join("|", newIntArr2));
 
-Console.WriteLine(sumAboveZero(userString));
+Console.WriteLine(SumAboveZero(userString));
